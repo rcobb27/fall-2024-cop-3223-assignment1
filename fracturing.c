@@ -102,7 +102,7 @@ double calculateDiameter(double x1, double y1, double x2, double y2)
 {
     double dx = x2 - x1;
     double dy = y2 - y1;
-    return sqrt((dx * dx) + (dy * dy));   
+    return sqrt((dx * dx) + (dy * dy));   //pythagorean theorem
 }
 
 
@@ -195,7 +195,7 @@ double calculateWidth()
     printf("Point #1 entered: x1 = %lf; y1 = %lf\n", x1, y1);
     printf("Point #2 entered: x2 = %lf; y2 = %lf\n", x2, y2);
 
-    double width = fabs(x2 - x1);
+    double width = fabs(x2 - x1); //makes sure that width is not negative
     printf("The width of the city encompassed by your request is %lf\n", width);
     return 1;
 }
@@ -225,7 +225,7 @@ double calculateHeight()
     printf("Point #1 entered: x1 = %lf; y1 = %lf\n", x1, y1);
     printf("Point #2 entered: x2 = %lf; y2 = %lf\n", x2, y2);
 
-    double height = fabs(y2 - y1);
+    double height = fabs(y2 - y1); //makes sure that height is not negative
     printf("The height of the city encompassed by your request is %lf\n", height);
     return 1;
 }
