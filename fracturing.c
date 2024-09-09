@@ -1,3 +1,15 @@
+//********************************************************
+// fracturing.c
+// Author: Ryan Cobb
+// Date: 9/8/24
+// Class: COP 3223, Professor Parra
+// Purpose: Do various calculations using two different points in space.
+//          The purpose of this assignment is to practice breaking up programs into functions.
+// Input: 4 doubles, representing x1, y1, x2, y2
+//
+// Output: Inputted points and results of calculations
+// //********************************************************
+
 #include <stdio.h>
 #include <math.h>
 
@@ -11,6 +23,14 @@ double calculateArea();
 double calculateWidth();
 double calculateHeight();
 
+//********************************************************
+// int main(int argc, char **argv)
+//
+// Purpose:         Calls all of the functions
+// Output:          Returns 0 to signal success
+// Precondition:    None.
+// Postcondition:   None.
+//********************************************************
 int main(int argc, char **argv)
 {
     calculateDistance();
@@ -22,6 +42,15 @@ int main(int argc, char **argv)
     return 0;
 }
 
+
+//********************************************************
+// double askForUserInput()
+//
+// Purpose:         Reads a double from the user
+// Output:          Returns value of user input
+// Precondition:    None.
+// Postcondition:   None.
+//********************************************************
 double askForUserInput()
 {
     double input;
@@ -29,6 +58,15 @@ double askForUserInput()
     return input;
 }
 
+
+//********************************************************
+// double calculateDistance();
+//
+// Purpose:         Calculates distance between two points
+// Output:          Prints the distances between two points and returns it
+// Precondition:    None.
+// Postcondition:   None.
+//********************************************************
 double calculateDistance()
 {
     printf("Input x1: ");
@@ -51,6 +89,15 @@ double calculateDistance()
     return distance;
 }
 
+
+//********************************************************
+// double calculateDiameter(double x1, double y1, double x2, double y2)
+//
+// Purpose:         Helper function which produces the same output as calculateDistance without printing it
+// Output:          Calculates and returns the euclidian distance between two points
+// Precondition:    None.
+// Postcondition:   None.
+//********************************************************
 double calculateDiameter(double x1, double y1, double x2, double y2)
 {
     double dx = x2 - x1;
@@ -58,6 +105,15 @@ double calculateDiameter(double x1, double y1, double x2, double y2)
     return sqrt((dx * dx) + (dy * dy));   
 }
 
+
+//********************************************************
+// double calculatePerimeter()
+//
+// Purpose:         Calculates and prints the perimeter of two points (of a circle -> circumference)
+// Output:          Prints perimeter and returns double rating difficulty of writing function from 1.0 - 5.0
+// Precondition:    None.
+// Postcondition:   None.
+//********************************************************
 double calculatePerimeter()
 {
     printf("Input x1: ");
@@ -81,6 +137,15 @@ double calculatePerimeter()
     return 1;
 }
 
+
+//********************************************************
+// double calculateArea()
+//
+// Purpose:         Calculate and print area of a circle created by two points
+// Output:          Prints area to the console and returns double rating difficulty of writing function form 1.0 - 5.0
+// Precondition:    None.
+// Postcondition:   None.
+//********************************************************
 double calculateArea()
 {
     printf("Input x1: ");
@@ -104,6 +169,15 @@ double calculateArea()
     return 1;
 }
 
+
+//********************************************************
+// double calculateWidth()
+//
+// Purpose:         Calculates width between two points and prints it
+// Output:          Prints width to the console and returns double rating difficulty of writing function form 1.0 - 5.0
+// Precondition:    None.
+// Postcondition:   None.
+//********************************************************
 double calculateWidth()
 {
     printf("Input x1: ");
@@ -126,6 +200,14 @@ double calculateWidth()
     return 1;
 }
 
+//********************************************************
+// double calculateHeight()
+//
+// Purpose:         Calculates height between two points and prints it
+// Output:          Prints height to the console and returns double rating difficulty of writing function form 1.0 - 5.0
+// Precondition:    None.
+// Postcondition:   None.
+//********************************************************
 double calculateHeight()
 {
     printf("Input x1: ");
