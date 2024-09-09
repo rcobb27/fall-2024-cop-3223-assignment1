@@ -31,8 +31,6 @@ double askForUserInput()
 
 double calculateDistance()
 {
-    double x, y;
-    scanf("Point #1 entered: x1 = %lf; y1 = %lf", &x, &y);
     printf("Input x1: ");
     double x1 = askForUserInput();
 
